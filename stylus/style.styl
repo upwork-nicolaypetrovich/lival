@@ -1,0 +1,1440 @@
+// out: style_default.css
+
+/*================================================*/
+/*                    MAIN STYLES                 */
+/*================================================*/
+html
+	height 100%
+
+body
+	color #fff
+	background-color #000
+	font-family Montserrat, sans-serif
+	font-size 15px
+	font-weight 300
+	width 100%
+	min-width 320px
+	max-width 100%
+	min-height 100%
+
+.nm-clear:after
+	content ""
+	display table
+	clear both
+	
+.nm-input
+	display block
+	color #fff
+	font-family ProductSans, sans-serif
+	font-size 15px
+	font-weight 400
+	background-color #343339
+	border none
+	border-radius 0
+	box-shadow none
+	width 100%
+	min-width 0
+	max-width none
+	height 47px
+	padding 0 18px
+	margin 0 0 15px 0
+	transition .4s
+	&:focus
+		background-color #484750
+		&::-webkit-input-placeholder
+			opacity 0
+			transform translateY(100%)
+		&:-ms-input-placeholder
+			opacity 0
+			transform translateY(100%)
+		&::-moz-placeholder
+			opacity 0
+			transform translateY(100%)
+
+.nm-input::-webkit-input-placeholder
+	color #858a87
+	font-family ProductSans, sans-serif
+	font-size 15px
+	font-weight 400
+	line-height 1.5
+	transition .4s
+	opacity 1
+
+.nm-input:-ms-input-placeholder
+	color #858a87
+	font-family ProductSans, sans-serif
+	font-size 15px
+	font-weight 400
+	line-height 1.5
+	transition .4s
+	opacity 1
+
+.nm-input::-moz-placeholder
+	color #858a87
+	font-family ProductSans, sans-serif
+	font-size 15px
+	font-weight 400
+	line-height 47px
+	opacity 1
+	transition .4s
+	
+input::-ms-clear
+	display none
+	
+.nm-hidden
+	display none
+
+.nm-hidden-imp
+	display none!important
+	
+h1
+h2
+	font-family Raleway
+	font-size 56px
+	letter-spacing 0.2em
+	font-weight 300
+	text-transform uppercase
+	
+h3
+	font-size 18px
+	letter-spacing 0.2em
+	font-weight 600
+	text-transform uppercase
+	margin-bottom 0.66em
+
+a
+	color #fff
+	font-family Montserrat, sans-serif
+
+p
+	line-height 1.8
+
+.nm-text-underline
+	display inline-block
+	border-bottom 1px solid #fff
+
+.nm-inline-block
+	display inline-block
+
+.nm-link-underline
+	border-bottom 1px solid #fff
+	text-decoration none
+	&:hover
+		text-decoration none
+		border-color transparent
+
+.nm-hover-underline
+	border-bottom 1px solid transparent
+	text-decoration none
+	&:hover
+		text-decoration none
+		border-color #fff
+
+.nm-border-bottom
+	border-bottom 1px solid rgba(228, 228, 228,0.7)
+	padding-bottom 20px
+	margin-bottom 27px
+
+.nm-btn
+	display inline-block
+	cursor pointer
+	text-align center
+	color white
+	font-family ProductSans, sans-serif
+	font-size 15px
+	font-weight 400
+	white-space nowrap
+	text-decoration none
+	text-transform uppercase
+	background none
+	background-color transparent
+	outline none
+	border 1px solid rgba(255, 255, 255, 0.52)
+	border-radius 0
+	box-shadow none
+	padding 13px 30px
+	transition .2s
+	&:hover
+		background-color #343339
+		border-color #343339
+		color #fff
+	&:active
+		background-color #484750
+		border-color #484750
+		color #fff
+
+.nm-relative
+	position relative
+
+.nm-text-left
+	text-align left
+	
+.nm-text-center
+	text-align center
+
+.nm-text-right
+	text-align right
+
+.nm-just-center
+	justify-content center
+	
+.nm-align-center
+	align-items center
+
+.nm-img-wrap
+	position relative
+	img
+		display inline-block
+		max-width 100%
+		max-height 100%
+		
+.nm-pad15
+	padding 0 15px
+
+//slick arrows
+.slick-prev
+.slick-next
+	position absolute
+	display block
+	cursor pointer
+	font-size 0
+	background none
+	border none
+	outline none
+	width 20px
+	height 18px
+	transition .2s
+	z-index 3
+	&:before
+	&:after
+		position absolute
+		display block
+		content ""
+		background-color #fff
+		height 1px
+		width 7px
+		left 50%
+	&:before
+		top 5px
+		transform translateX(-50%) rotate(45deg)
+	&:after
+		top 10px
+		transform translateX(-50%) rotate(-45deg)
+	&.slick-prev
+		transform scaleX(-1)
+		
+.nm-dratyti {}
+//animations
+@keyframes ghost
+	0%
+		opacity 0
+	100%
+		opacity 1
+
+.nm-dratyti {}
+/*================================================*/
+/*                    HEADER	                  */
+/*================================================*/
+header
+	position fixed
+	background transparent
+	top 0
+	left 0
+	width 100%
+	padding 45px 0 15px 0 
+	transition .4s
+	z-index 100
+	&.nm-bg
+		background-color rgba(0,0,0,0.9)
+		padding 5px 0
+		
+	.nm-wrapper
+		position relative
+		display flex
+		flex-direction row
+		justify-content space-between
+		align-items center
+		width 100%
+		max-width 1200px
+		padding 0 15px
+		margin 0 auto
+	.nm-menu-expand
+		position relative
+		display none
+		cursor pointer
+		background-color transparent
+		width 30px
+		min-width 30px
+		max-width 30px
+		height 30px
+		span
+			display block
+			position absolute
+			background-color #fff
+			left 0
+			transform rotate(0deg)
+			transition .2s
+			width 100%
+			height 4px
+			&:nth-child(1)
+				top 2px
+			&:nth-child(2)
+			&:nth-child(3)
+				top 13px
+			&:nth-child(4)
+				top 24px
+		&.nm-active
+			transition none
+			span
+				&:nth-child(1)
+					top 5px
+					width 0
+					left 50%
+					transition none
+				&:nth-child(2)
+					transform rotate(45deg)
+				&:nth-child(3)
+					transform rotate(-45deg)
+				&:nth-child(4)
+					top 10px
+					width 0%
+					left 50%
+					transition none
+	nav
+		margin-right 55px
+		margin-left auto
+		ul
+			display flex
+			flex-direction row
+			align-items center
+			margin 0
+			li
+				display block
+				margin-right 50px
+				a
+					color #fff
+					font-size 14px
+					letter-spacing 0.1em
+					font-weight 300
+					text-transform uppercase
+					border-bottom 1px solid transparent
+					&:hover
+						border-color #fff
+				&.current
+					a
+						text-shadow -0.5px 0px 0px #fff, 0px -0.5px 0px #fff
+						border-color #fff
+	.nm-language-block
+		position absolute
+		top 17px
+		right 15px
+		z-index 3
+		ul
+			display flex
+			flex-direction row
+			align-items center
+			margin 0
+			li
+				display block
+				&:not(:last-child)
+					&:after
+						content "|"
+						margin 0 0.5em
+				a
+					color #fff
+					font-size 14px
+					font-weight 300
+					text-transform uppercase
+					border-bottom 1px solid transparent
+					&:hover
+						border-color #fff
+				&.current
+					a
+						//border-color #fff
+.nm-dratyti{}
+/*================================================*/
+/*                    MAIN 		                  */
+/*================================================*/
+main
+	width 100%
+	
+.nm-section-bootstrap-wrap
+	max-width 1200px
+	margin 0 auto
+	
+.nm-section-hullhd-wrap
+	max-width 1920px
+	margin 0 auto
+	
+.nm-dratyti{}
+//homepage
+.nm-section-slider
+	.nm-section-wrap
+		max-width 2560px
+		margin 0 auto
+	#nm-slider-home
+		.nm-slide
+			display flex
+			justify-content center
+			background-repeat no-repeat
+			background-size cover
+			background-position bottom center
+			padding 90px 15px
+			min-height 100vh
+			.nm-slide-wrap
+				position relative
+				display flex
+				flex-direction column
+				justify-content center
+				align-items center
+			.nm-slide-text
+				max-width 650px
+			.nm-slide-caption
+				font-size 33px
+				letter-spacing 0.2em
+				font-weight 200
+				text-transform uppercase
+				margin-bottom 0.5em
+			.nm-slide-subtext
+				font-family Raleway, sans-serif
+				font-size 19px
+				font-weight 200
+				text-transform uppercase
+				margin-bottom 0.5em
+			.nm-slider-nav
+				position absolute
+				display flex
+				justify-content center
+				align-items center
+				text-align center
+				bottom 7vh
+				left 0
+				right 0
+			.nm-slide-link
+				font-family Montserrat
+				font-size 14px
+				letter-spacing 0.5em
+				font-weight 200
+				text-transform uppercase
+				text-decoration none
+				border-bottom 1px solid #fff
+				margin 0 35px
+				&:hover
+					border-color transparent
+			.nm-slider-arrow
+				position relative
+				cursor pointer
+				width 20px
+				height 18px
+				transition .2s
+				&:before
+				&:after
+					position absolute
+					display block
+					content ""
+					background-color #fff
+					height 1px
+					width 7px
+					left 50%
+				&:before
+					top 5px
+					transform translateX(-50%) rotate(45deg)
+				&:after
+					top 10px
+					transform translateX(-50%) rotate(-45deg)
+				&.prev
+					transform scaleX(-1)
+				
+.nm-section-lival
+	position relative
+	padding 250px 0
+	h1
+		line-height 1
+		white-space nowrap
+		margin-top -0.1em
+	.nm-abs-decor
+		position absolute
+		top -450px
+		right 32px
+		width 25px
+		height 417px
+		.nm-oval
+			position absolute
+			border 2px solid #fff
+			border-radius 25px
+			top 0
+			right 0
+			width 25px
+			height 45px
+			&:after
+				position absolute
+				display block
+				content ""
+				background-color #fff
+				width 1px
+				height 6px
+				top 6px
+				right 10px
+		.nm-line
+			position absolute
+			background-color #fff
+			width 1px
+			height 360px
+			bottom 0
+			right 12px
+			&:before
+			&:after
+				position absolute
+				display block
+				content ""
+				background-color #fff
+				width 10px
+				height 2px
+				top -5px
+			&:before
+				left -8px
+				transform rotate(45deg)
+			&:after
+				right -8px
+				transform rotate(-45deg)
+					
+	.nm-logos-row
+		display flex
+		.nm-img-wrap
+			border-radius 50%
+			width 63px
+			min-width 63px
+			max-width 63px
+			height 63px
+			background-color #fff
+			margin-top 55px
+			&:not(:last-child)
+				margin-right 45px
+			img
+				display inline-block
+				border-radius 50%
+				max-width 100%
+				max-height 100%
+	.nm-descr
+		line-height 1.8
+
+.nm-section-produtos
+	padding-top 120px
+	padding-bottom 280px
+	.nm-productos-row
+		display flex
+		.nm-item
+			position relative
+			display block
+			background-repeat no-repeat
+			background-size cover
+			background-position center center
+			width 20%
+			flex-grow 1
+			height 750px
+			padding 40px
+			margin-top 140px
+			&:hover
+				&:before
+					background-color transparent
+				.nm-caption
+					border-bottom 1px solid #fff
+			&:before
+				position absolute
+				display block
+				content ""
+				background-color rgba(0,0,0,0.7)
+				top 0
+				left 0
+				right 0
+				bottom 0
+				z-index 1
+				transition .3s ease-in-out
+			.nm-caption
+				position relative
+				display inline
+				border-bottom 1px solid transparent
+				font-size 28px
+				letter-spacing 0.2em
+				text-transform uppercase
+				transition .3s ease-in-out
+				z-index 2
+
+.nm-decor-overwrap
+	background-image url("../img/homepage-bg.png")
+	background-repeat no-repeat
+	background-position top 190px left calc(50vw + 480px)
+.nm-section-qualidade
+	padding-top 120px
+	padding-bottom 280px
+	line-height 1.8
+	.nm-img-decor
+		position absolute
+		display block
+		top 110px
+		left 1480px
+	h2
+		line-height 1
+		margin-top -0.1em
+	.nm-icons-row
+		display flex
+		justify-content space-between
+		align-items flex-end
+		padding-right 25px
+		margin 45px 0
+	.nm-pad-left
+		padding-left 50px
+
+.nm-section-contactos
+	padding-top 120px
+	padding-bottom 50px
+	h2
+		margin-bottom 40px
+	.nm-fl-row
+		display flex
+	.nm-social
+		padding-top 10px
+		margin-right 65px
+		li
+			display block
+			text-align center
+			width 20px
+			min-width 20px
+			max-width 20px
+			&:not(:last-child)
+				margin-bottom 16px
+			a
+				display inline-block
+				&:hover
+					opacity 0.7
+	.nm-map-block
+		width 60%
+		flex-grow 1
+	#map
+		width 100%
+		height 330px
+	.nm-pad-left
+		padding-left 10px
+	.nm-subblock
+		&:not(:last-child)
+			margin-bottom 1.5em
+		>div
+			margin-bottom 0.66em
+	.nm-form-contacts
+		position relative
+		margin-top 40px
+		.nm-success-block
+			position absolute
+			display none
+			top 35px
+			left 0
+			right 0
+			bottom 0
+			background-color #000
+			font-size 16px
+			font-weight 400
+			text-transform uppercase
+			transition .3s
+			z-index 2
+			.nm-inner-wrap
+				display flex
+				flex-direction column
+				justify-content flex-end
+				height 100%
+			.nm-cool
+				margin-top 1em
+				text-transform none
+			.nm-apply-row
+				text-align right
+				margin-top 20px
+				img
+					display inline-block
+	.nm-inputs-block
+		margin-top 30px
+		margin-bottom 30px
+.nm-dratyti{}
+//category page
+.nm-section-produtos-header
+	position relative
+	padding 240px 0 190px 0
+	.nm-inner-img-bg
+		position absolute
+		top 0
+		left 0
+		right 0
+		bottom 0
+		background-repeat no-repeat
+		background-size cover
+		background-position top right
+		transform scale(-1,-1)
+		z-index -1
+.nm-section-produtos.nm-inner
+	padding-top 0
+	.nm-fl-row
+		display flex
+		justify-content space-between
+		align-items stretch
+	.nm-slider-categories-nav-block
+		width 20%
+	.nm-slider-products-block
+		position relative
+		width 80%
+		.product-prev
+		.product-next
+			top 70px
+			width 24px
+			height 20px
+			&:before
+			&:after
+				width 10px
+			&:after
+				top 12px
+		.product-prev
+			left -20px
+		.product-next
+			right 20px
+
+#nm-slider-categories-nav
+	.slick-prev
+		top 210px
+		left 65px
+	.slick-next
+		top 210px
+		right 65px
+	.nm-slide
+		.nm-slide-wrap
+			text-align center
+			padding 180px 65px 0 65px
+			overflow hidden
+		.nm-title-wrap
+			padding 0 20px
+		.nm-title
+			display inline
+			font-size 28px
+			letter-spacing 0.2em
+			font-weight 600
+			text-transform uppercase
+			border-bottom 1px solid #fff
+			word-break break-all
+		.nm-description
+			font-size 12px
+			font-weight 300
+			margin-top 20px
+
+.nm-products-slider
+	.nm-products-slide
+		.nm-item
+			position relative
+			display block
+			background-repeat no-repeat
+			background-size cover
+			background-position center center
+			height 750px
+			padding 40px
+			&:hover
+				&:before
+					background-color transparent
+				.nm-caption
+					border-bottom 1px solid #fff
+			&:before
+				position absolute
+				display block
+				content ""
+				background-color rgba(0,0,0,0.7)
+				top 0
+				left 0
+				right 0
+				bottom 0
+				z-index 1
+				transition .3s ease-in-out
+			.nm-caption
+				position relative
+				display inline
+				border-bottom 1px solid transparent
+				font-size 28px
+				letter-spacing 0.2em
+				text-transform uppercase
+				transition .3s ease-in-out
+				z-index 2
+
+.nm-dratyti{}
+//product page
+.nm-section-product
+	position relative
+	line-height 1.8
+	padding 200px 0 120px 0 
+	.nm-bg-overbg
+		position absolute
+		top 0
+		left 0
+		right 0
+		height 600px
+		background-repeat no-repeat
+		background-size cover
+		background-position top right
+		transform scale(-1,-1)
+		z-index -1
+	.nm-back
+		.nm-arrow-left
+			display block
+			background-image url("../img/icon-arrow-right.svg")
+			background-repeat no-repeat
+			background-size contain
+			background-position center center
+			width 7px
+			height 14px
+			transform scaleX(-1)
+			margin-bottom 12px
+		.nm-product-name
+			display inline-block
+			font-size 14px
+			letter-spacing 0.15em
+			font-weight 200
+			line-height 1
+			border-bottom 1px solid #fff
+			text-transform uppercase
+			margin-bottom 0.5em
+			&:hover
+				border-color transparent
+	.nm-category-name
+		font-size 49px
+		letter-spacing normal
+		font-weight 600
+		line-height 1
+		text-transform uppercase
+		margin-bottom 1.05em
+	.nm-text-block
+		p
+			margin-bottom 3.7em
+	.nm-divider
+	hr
+		height 1px
+		opacity 0.7
+		background-color #e4e4e4
+		margin 45px 0 40px 0
+		&.nm-maxw
+			max-width 474px
+	hr
+		max-width 474px
+	.nm-pad-left
+		padding-left 60px
+	.nm-images-block
+		margin-bottom 40px
+		#nm-slider-product
+			.nm-slide-img
+				display block
+				background-repeat no-repeat
+				background-size cover
+				background-position center center
+				&:after
+					display block
+					content ""
+					padding-top 66.66%
+		#nm-slider-product-nav
+			overflow hidden
+			.slick-list
+				margin 0 -6px
+			.nm-slide-img
+				display block
+				cursor pointer
+				background-repeat no-repeat
+				background-size cover
+				background-position center center
+				margin 12px 6px
+				&:after
+					display block
+					content ""
+					padding-top 66.66%
+			.slick-prev
+			.slick-next
+				width 24px
+				height 20px
+				top 50%
+				&:before
+					top 4px
+					width 10px
+				&:after
+					width 10px
+					
+			.slick-prev
+				left 0px
+				transform translateY(-50%) scaleX(-1)
+			.slick-next
+				right 0px
+				transform translateY(-50%)
+		
+	.nm-download-block
+		a
+			position relative
+			display inline-block
+			color #0dff7f
+			font-size 15px
+			line-height 1
+			letter-spacing 0.2em
+			font-weight 500
+			padding-left 38px
+			margin-top 10px
+			&:after
+				position absolute
+				display block
+				content ""
+				background-color #0dff7f
+				top 100%
+				left 38px
+				right 0
+				height 1px
+				transition .2s
+			&:hover
+				&:after
+					background-color transparent
+			.nm-arrow-block
+				position absolute
+				display block
+				content ""
+				border-radius 50%
+				background-color #666
+				width 24px
+				height 24px
+				top 50%
+				left 0
+				transform translateY(-50%)
+				&:before
+				&:after
+					position absolute
+					display block
+					content ""
+					background-color #fff
+					height 2px
+					top 12px
+					width 8px
+				&:before
+					left 5px
+					transform rotate(35deg)
+				&:after
+					right 5px
+					transform rotate(-35deg)
+					
+.slick-lightbox
+	.slick-arrow
+		top 50%
+		transform translateY(-50%)
+		&.slick-prev
+			transform translateY(-50%) scaleX(-1)
+.slick-lightbox-close
+	width 40px
+	height 40px
+	top 12px
+	right 10px
+	&:before
+		position absolute
+		display block
+		font-size 60px
+		top 50%
+		left 50%
+		transform translateX(-50%) translateY(-50%)
+.nm-dratyti{}
+/*================================================*/
+/*                    FOOTER	                  */
+/*================================================*/
+footer
+	position relative
+	background-repeat no-repeat
+	background-position top left
+	background-size cover
+	padding-top 120px
+	padding-bottom 100px
+	.nm-subscribe-form
+		position relative
+		margin-bottom 70px
+		.nm-caption
+			font-size 16px
+			margin-bottom 1.5em
+		.nm-input-wrap
+			position relative
+			width 300px		
+			max-width 300px
+			margin 0 auto
+		.nm-input
+			background-color transparent
+			background-image url("../img/icon-mail.svg")
+			background-repeat no-repeat
+			background-size 16px 11px
+			background-position left 0px center
+			border none
+			border-bottom 1px solid #4d4d4d
+			padding 0 20px 0 25px
+			height 33px
+			&:focus
+				border-color #fff
+		.nm-btn-arrow
+			display block
+			position absolute
+			background-image url("../img/icon-arrow-right.svg")
+			background-repeat no-repeat
+			background-size 10px 16px
+			background-position left 0px center
+			font-size 0
+			color transparent
+			border none
+			background-color transparent
+			padding 0
+			margin 0
+			width 17px
+			min-width 17px
+			max-width 17px
+			height 16px
+			right -5px
+			top 50%
+			transform translateY(-50%)
+			transition 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+			&:hover
+				background-position left 5px center
+			
+		.nm-success-block
+			position absolute
+			display none
+			top 0
+			left 0
+			right 0
+			background-color #000
+			font-size 14px
+			font-weight 400
+			text-transform uppercase
+			transition .3s
+			padding 7px
+			min-height 100%
+			z-index 2
+			.nm-inner-wrap
+				height 100%
+			.nm-cool
+				font-size 16px
+				margin-top 0.8em
+				text-transform none
+			.nm-apply-row
+				text-align right
+				margin-top 5px
+				img
+					display inline-block
+
+	.nm-icons-row
+		display flex
+		justify-content space-between
+		align-items center
+		max-width 380px
+		margin 0 auto
+	.nm-footer-links
+		column-count 2
+		column-gap 60px
+		li
+			margin-bottom 1em
+			a
+				font-family Raleway
+				font-size 14px
+				font-weight 400
+				border-bottom 1px solid transparent
+				&:hover
+					border-color #fff
+	.nm-footer-row
+		display flex
+		align-items baseline
+		justify-content center
+		color #4d4d4d
+		font-family Raleway
+		font-size 12px
+		font-weight 600
+		margin-top 100px
+	.nm-copyrights
+		position relative
+		padding-right 1.1em
+		margin-right 0.8em
+		&:after
+			position absolute
+			display block
+			content ""
+			background-color #4d4d4d
+			width 5px
+			height 5px
+			border-radius 50%
+			top 50%
+			right 0
+			transform translateY(-50%)
+	.nm-designed
+		a
+			color #4d4d4d
+			font-family Raleway
+			font-size 12px
+			font-weight 600
+			border-bottom 1px solid transparent
+			&:hover
+				border-color #4d4d4d
+.nm-dratyti{}
+/*================================================*/
+/*                    MEDIA		                  */
+/*================================================*/
+@media (min-width 1921px)
+	.nm-decor-overwrap
+		background-position top 190px right calc(50vw - 1250px)
+	.nm-section-produtos
+		.nm-productos-row
+			.nm-item
+				height 39.5vw
+				padding 2.1vw
+
+@media (min-width 2500px)
+	.nm-decor-overwrap
+		background-position top 190px right
+
+@media (max-width 1900px)
+	//homepage
+	.nm-section-produtos
+		.nm-productos-row
+			.nm-item
+				height 39.5vw
+				padding 2.1vw
+				margin-top 7.368vw
+				.nm-caption
+					font-size 1.4737vw
+	//produtos page
+	.nm-section-produtos.nm-inner .nm-slider-products-block
+		.product-next
+		.product-prev
+			top 3.6842vw
+		.product-next
+			right 1.0526vw
+		
+	#nm-slider-categories-nav
+		.slick-prev
+			top 11.0526vw
+			left 3.421vw
+		.slick-next
+			top 11.0526vw
+			right 3.421vw
+		.nm-slide
+			.nm-slide-wrap
+				padding 9.4737vw 3.421vw 0 3.421vw
+				max-height 39.5vw
+			.nm-title-wrap
+				padding 0 1.0526vw
+			.nm-title
+				font-size 1.4737vw
+			.nm-description
+				font-size 12px
+				margin-top 1.0526vw
+		
+	.nm-products-slider
+		.nm-products-slide
+			.nm-item
+				height 39.5vw
+				padding 2.1vw
+				.nm-caption
+					font-size 1.4737vw
+					
+
+@media (max-width 1365px)
+	.nm-section-produtos.nm-inner
+		.nm-slider-categories-nav-block
+			width 25%
+		.nm-slider-products-block
+			width 75%
+			
+@media (max-width 1023px)
+	.nm-section-produtos.nm-inner
+		.nm-slider-categories-nav-block
+			width 40%
+		.nm-slider-products-block
+			width 60%
+			
+	#nm-slider-categories-nav .nm-slide .nm-title-wrap
+		min-height 38px
+		
+@media (max-width 991px)
+	.nm-section-qualidade .nm-pad-left
+		padding-left 0
+		margin-top 40px
+	.nm-section-contactos 
+		.nm-social
+			margin-right 30px
+		.nm-pad-left
+			padding-left 0
+
+@media (max-width 767px)
+	html.nm-fixed
+		height 100%!important
+		overflow hidden!important
+	header
+		padding 5px 0
+		nav
+			display none
+			position fixed
+			vertical-align middle
+			background-color rgba(0,0,0,0.95)
+			top 0
+			left 0
+			width 100%
+			height 100%
+			padding-top 60px
+			padding-bottom 40px
+			animation-name ghost
+			animation-duration .2s
+			animation-iteration-count 1
+			z-index 1
+			.menu-top-navigation-container
+				display table-cell
+				vertical-align middle
+				text-align center
+			ul
+				display block
+				margin-bottom 0
+				li:not(:first-child)
+					margin-left 0
+				li
+					width 100%
+					padding 20px 0
+					a
+						font-size 18px
+						font-weight 500
+		.nm-logo
+			position relative
+			z-index 3
+		.nm-menu-expand
+			display block
+			margin-right 0
+			margin-left auto
+			z-index 2
+		.nm-language-block
+			right 70px
+		
+	.nm-section-lival
+		text-align center
+		padding 80px 0
+		.nm-abs-decor
+			top -250px
+		.nm-logos-row
+			margin-bottom 60px
+		
+	.nm-section-produtos
+		padding-bottom 120px
+		.nm-productos-row
+			flex-wrap wrap
+			margin-top 60px
+			.nm-item
+				width 50%
+				flex-grow 0
+				height 60vw
+				padding 40px
+				margin-top 0
+				&:before
+					content none
+				.nm-caption
+					font-size 20px
+					br
+						content ""
+	
+	.nm-section-qualidade
+		text-align center
+		padding-bottom 80px
+		.nm-icons-row
+			padding-right 0
+	.nm-section-contactos
+		padding-top 80px
+		.nm-fl-row
+			display block
+			.nm-social
+				display flex
+				justify-content center
+				padding-top 0
+				margin-right 0
+				margin-bottom 40px
+				li
+					margin 0 10px
+			.nm-map-block
+				width 100%
+				margin-bottom 40px
+		.nm-form-contacts
+			h3
+				text-align center
+		
+	//PRODUCTO PAGE
+	.nm-section-produtos-header
+		padding 200px 0 140px 0
+	.nm-section-produtos.nm-inner
+		margin-bottom 40px
+		.nm-fl-row
+			display block
+		.nm-slider-categories-nav-block
+			width 100%
+		.nm-slider-products-block
+			width 100%
+			.product-prev
+			.product-next
+				top 50%
+			.product-prev
+				left 15px
+			.product-next
+				right 15px
+				
+	#nm-slider-categories-nav
+		.slick-prev
+			top 25px
+			left 65px
+		.slick-next
+			top 25px
+			right 65px
+		.nm-slide
+			.nm-slide-wrap
+				padding 20px 15px
+				max-height none
+			.nm-title-wrap
+				padding 0 70px
+				min-height 0
+			.nm-title
+				font-size 20px				
+			.nm-description
+				font-size 12px
+				margin-top 20px
+				padding-bottom 20px
+				
+	.nm-products-slider
+		.nm-products-slide
+			.nm-item
+				height 90vw
+				padding 20px
+				&:before
+					content none
+				.nm-caption
+					font-size 20px
+					br
+						display inline-block
+						content ""
+						margin 0 0.3em
+	.nm-dratyti{}
+	//product page
+	.nm-section-product
+		text-align center
+		.nm-pad-left
+			position static
+			padding-left 15px
+			margin-top 40px
+		.nm-divider.nm-maxw
+		hr
+			max-width none
+		.nm-images-block
+			position absolute
+			top 120px
+			left 15px
+			right 15px
+			height 100vw
+		.nm-text-block:not(.nm-no-images)
+			padding-top 104vw
+			
+	footer
+		text-align center
+		padding-top 80px
+		padding-bottom 60px
+		.nm-icons-row
+			max-width 400px
+			margin 0 auto
+		.nm-footer-links
+			display inline-block
+			text-align left
+			max-width 400px
+			margin 50px auto 0 auto
+		.nm-footer-row
+			margin-top 60px
+
+@media (max-height 600px)
+	.nm-section-slider #nm-slider-home .nm-slide
+		padding 70px 15px 100px 15px
+		.nm-slider-nav
+			bottom -40px
+	.nm-section-lival 
+		.nm-abs-decor
+			height 260px
+			top -170px
+			.nm-line
+				height 200px
+				
+		
+@media (max-width 575px)
+	h1
+	h2
+		font-size 36px
+	.nm-section-slider #nm-slider-home .nm-slide
+		.nm-slide-caption
+			font-size 22px
+		.nm-slide-subtext
+			font-size 16px
+		
+	.nm-section-lival
+		padding-bottom 0
+		.nm-abs-decor
+			display none
+		h1
+			text-align center
+		.nm-logos-row .nm-img-wrap
+			margin-top 40px
+			font-size 42px
+			
+	.nm-section-produtos
+		padding-top 80px
+		padding-bottom 40px
+		.nm-productos-row
+			margin-top 40px
+			.nm-item
+				padding 15px
+				.nm-caption
+					font-size 16px
+		
+	.nm-section-qualidade
+		padding-top 80px
+		padding-bottom 0
+		
+	.nm-section-contactos
+		padding-top 80px
+		h2
+			margin-bottom 30px
+	//product page
+	.nm-section-product
+		padding 180px 0 80px 0
+		.nm-category-name
+			font-size 42px
+
+@media (max-width 440px)
+	//page producto
+	#nm-slider-categories-nav .nm-slide .nm-title-wrap
+		min-height 38px
+		padding 0 40px
+	#nm-slider-categories-nav
+		.slick-next
+		.slick-prev
+			top 38px
+		.slick-next
+			right 25px
+		.slick-prev
+			left 25px
+		
+	.nm-products-slider
+		.nm-products-slide
+			margin 0 1px
+			.nm-item
+				height 190vw
+				text-align center
+				
+	//product page
+	footer .nm-subscribe-form .nm-input-wrap
+		width 290px
+	.slick-lightbox
+		.slick-prev
+			left 5px
+		.slick-next
+			right 5px
+	.slick-lightbox-slick-item-inner
+		max-width 98%
+		img
+			max-width 100%
+
+@media (max-height 340px) and (max-width 767px)
+	header nav
+		padding-bottom 15px
+		ul li
+			padding 10px 0

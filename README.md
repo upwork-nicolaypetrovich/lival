@@ -1,1 +1,1 @@
-# lival
+Multilingual store of building materials with unusual catalogue structure. All catalogues are sliders in sliders.
